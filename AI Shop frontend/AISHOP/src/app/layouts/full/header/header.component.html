@@ -1,0 +1,51 @@
+<mat-toolbar class="topbar">
+
+  <div class="flex-1 mx-2 mt-1">
+  <p class="text-2xl font-bold text-black"> Welcome back! </p>
+  </div>
+  <br/>
+
+  <span class="flex-1-auto"></span>
+
+  <button
+    mat-fab
+    extended
+    color="inherit"
+    [matMenuTriggerFor]="profilemenu"
+    aria-label="Notifications"
+    class="d-flex justify-content-center profile-btn-dd"
+  >
+    <img
+      src="/assets/images/profile/user-1.jpg"
+      class="rounded-circle object-cover icon-35 profile-dd"
+      width="35"
+    />
+  </button>
+  <mat-menu #profilemenu="matMenu" class="topbar-dd cardWithShadow">
+    <button mat-menu-item>
+      <mat-icon class="d-flex align-items-center"
+        ><i
+          data-icon="solar:shield-user-line-duotone"
+          class="iconify icon-22"
+        ></i></mat-icon
+      >My Profile
+    </button>
+
+
+    <div class="p-x-12 m-t-12">
+      <a
+        [routerLink]="['/authentication/login']"
+        mat-stroked-button
+        color="primary"
+        class="w-100"
+        >Logout</a
+      >
+    </div>
+  </mat-menu>
+</mat-toolbar>
+<div class="flex-1 justify-center items-center mx-8">
+  <p class="text-md text-xl text-blue-500 font-bold text-md">Empowering Innovation and Growth</div>
+<br/>
+<div class="flex-1 justify-center items-center mx-8">
+  <p class="text-black text-md font-bold text-md">We are thrilled to have you here! This dashboard is your central hub for managing and optimizing the AI marketplace. With powerful tools and insights at your fingertips, you can oversee listings, track user engagement, and analyze market trends to drive success. !</p>
+</div>
